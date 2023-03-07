@@ -4,6 +4,7 @@ import com.example.boilerplate_spring.converters.BaseConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public abstract class AbstractController<E, D> {
 
     @PostMapping()
     @Transactional
-    public void add(@RequestBody D e) throws Exception {
+    public void add(@Validated @RequestBody D e) throws Exception {
         service.add(converter.convertDto(e));
     }
 

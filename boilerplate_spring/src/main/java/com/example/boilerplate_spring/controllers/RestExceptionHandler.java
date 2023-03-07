@@ -3,6 +3,8 @@ package com.example.boilerplate_spring.controllers;
 import com.example.boilerplate_spring.exceptions.ServiceException;
 import jakarta.annotation.PostConstruct;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -23,6 +25,7 @@ public class RestExceptionHandler {
             throw new RuntimeException(e);
         }
     }
+
     @ExceptionHandler(ServiceException.class)
     public ResponseEntity<ExceptionResponse> handleException(ServiceException exception) {
         ExceptionResponse response = new ExceptionResponse();
@@ -33,6 +36,17 @@ public class RestExceptionHandler {
             properties.getProperty("default");
         }
         response.setMessage(prop);
+        return ResponseEntity.badRequest().body(response);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ExceptionResponse> handleException(MethodArgumentNotValidException exception) {
+        ExceptionResponse response = new ExceptionResponse();
+        response.setHasError(true);
+        exception.printStackTrace();
+        FieldError field = exception.getBindingResult().getFieldError();
+        String message = "error in field : " + field.getField() + " " + field.getDefaultMessage();
+        response.setMessage(message);
         return ResponseEntity.badRequest().body(response);
     }
 

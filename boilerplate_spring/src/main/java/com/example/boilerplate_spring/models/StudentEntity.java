@@ -1,11 +1,13 @@
 package com.example.boilerplate_spring.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
 @Table(name = "THIRD_STUDENT")
+@Data
 public class StudentEntity extends AbstractEntity{
     @Column(name="FIRST_NAME")
     private String name;
@@ -17,52 +19,4 @@ public class StudentEntity extends AbstractEntity{
     private String studentId;
     @ManyToMany(cascade = CascadeType.ALL)
     private List<CourseEntity> courses;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getFamily() {
-        return family;
-    }
-
-    public void setFamily(String family) {
-        this.family = family;
-    }
-
-    public Integer getPassedCourse() {
-        return passedCourse;
-    }
-
-    public void setPassedCourse(Integer passedCourse) {
-        this.passedCourse = passedCourse;
-    }
-
-    public String getNationalCode() {
-        return nationalCode;
-    }
-
-    public void setNationalCode(String nationalCode) {
-        this.nationalCode = nationalCode;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
-    public List<CourseEntity> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<CourseEntity> courses) {
-        this.courses = courses;
-    }
 }
