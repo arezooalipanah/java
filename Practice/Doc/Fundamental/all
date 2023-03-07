@@ -1,0 +1,26 @@
+java features:
+simple
+oop
+platform independent
+secure
+interpreted
+multithread
+
+JDK:
+java development kit
+به درد برنامه نویس ها میخوره و اجازه کامپایل و اجرای برنامه های جاوا را می دهد.کلا به درد برنامه نویس های جاوا میخوره , خود JVMداخل JDKقرار داره
+JRE:
+java runtime enviroment
+بخش کوچکی از خود jdk هست که فقط برای اجرای برنامه های جاوا کافی هست. به درد فقط اجرای برنامه های جاوا میخورد
+
+
+compile java program:
+// javac filename.java
+با دستور بالا فایل کامپایل میشه و به byte code تبدیل میشه و یک فایل filename.class ساخته میشه.
+
+run java program:
+// java filename
+جاوا jvm رو فراخوانی میکنه و برنامه ما رو بر مبنای jvm اجرا میکنه
+
+// notes
+case sensitive name
