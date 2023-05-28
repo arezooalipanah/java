@@ -1,0 +1,40 @@
+1-Which of the following statements are true? 
+--B.
+
+2-Which of the following pairs fill in the blanks to make this code compile?
+7: public void ohNo() _____ Exception {
+8: _____________ Exception();
+9: }
+--B & D.
+
+3-When are you required to use a finally block in a regular try statement?
+--C.
+
+4-Which exception will the following throw?
+--B.
+
+5-Which of the following exceptions are thrown by the JVM?
+--A & B & D.
+
+6-What will happen if you add the statement System.out.println(5 / 0); to a working
+main() method?
+--C.
+
+7-What is printed besides the stack trace caused by the NullPointerException from line 16?
+--C.
+
+8-What is the output of the following snippet, assuming a and b are both 0?
+--E.
+
+9-What is the output of the following program?
+--B.
+
+10-What is the output of the following program?
+--E.
+
+11-What is the output of the following program?
+--A.
+
+12-What is printed by the following? 
+124The uncaught NullPointerException causes the stack trace to be
+printed
