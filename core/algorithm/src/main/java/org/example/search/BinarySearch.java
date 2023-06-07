@@ -25,14 +25,10 @@ public class BinarySearch {
 }
 
 class Main {
-    private static int $;
     public static void main(String[] args) {
         Optional<Integer> item = BinarySearch.binarySearch(new int[]{5, 8, 9, 12, 13}, 5);
-//        System.out.println("item is : " + item.isPresent(() -> ));
-
-        String a_b;
-        System.out.print($);
-        System.out.print(a_b);
+//        System.out.println("item is : " + item.isPresent(() -> ))
+        System.out.println(item + "item was");
 
     }
 }
