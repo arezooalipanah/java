@@ -1,9 +1,6 @@
 package org.example.abstractfactory;
 
-import org.example.abstractfactory.animal.Animal;
-import org.example.abstractfactory.color.Black;
 import org.example.abstractfactory.color.Color;
-import org.example.abstractfactory.color.White;
 
 public class FactoryProvider {
     public static AbstractFactory getFactory(String choice) {
@@ -23,5 +20,6 @@ class Test {
         AbstractFactory color = FactoryProvider.getFactory("Color");
         Color black = (Color) color.create("BLACK");
         System.out.println(black.getColor());
+        System.out.println("hello".equals("helkklo"));
     }
 }
