@@ -1,19 +1,19 @@
 package org.example.recursive;
 
-public class Recursive {
-    public static int sumOfArray(int[] list, int n) {
+public class SumOfArray {
+    public static int calcSum(int[] list, int n) {
         if (n <= 0) {
             return 0;
         }
 
-        return sumOfArray(list, n - 1) + list[n - 1];
+        return calcSum(list, n - 1) + list[n - 1];
     }
 }
 
-class Main {
+class Main1 {
     public static void main(String[] args) {
         int arr[] = {2, 5, 6, 8, 9, 12};
-        int sum = Recursive.sumOfArray(arr, arr.length);
+        int sum = SumOfArray.calcSum(arr, arr.length);
         System.out.println(sum);
     }
 }
