@@ -2,7 +2,7 @@ package org.example.recursive;
 
 import java.util.Arrays;
 
-public class CountNumberInList {
+public class CountNumberInArray {
     public static int doCount(int[] list) {
         if (list.length == 0) {
             return 0;
@@ -14,7 +14,7 @@ public class CountNumberInList {
 class Main2 {
     public static void main(String[] args) {
         int arr[] = {2, 5, 6, 8, 9, 12, 15};
-        int count = CountNumberInList.doCount(arr);
+        int count = CountNumberInArray.doCount(arr);
         System.out.println(count);
     }
 }

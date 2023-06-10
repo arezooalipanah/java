@@ -12,7 +12,7 @@ public class SumOfArray {
 
 class Main1 {
     public static void main(String[] args) {
-        int arr[] = {2, 5, 6, 8, 9, 12};
+        int arr[] = {2, 5, 6, 8, 9, 12, 15};
         int sum = SumOfArray.calcSum(arr, arr.length);
         System.out.println(sum);
     }
