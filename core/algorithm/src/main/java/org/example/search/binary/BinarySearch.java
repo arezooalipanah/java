@@ -1,6 +1,5 @@
-package org.example.search;
+package org.example.search.binary;
 
-import java.util.List;
 import java.util.Optional;
 
 public class BinarySearch {
@@ -27,7 +26,6 @@ public class BinarySearch {
 class Main {
     public static void main(String[] args) {
         Optional<Integer> item = BinarySearch.binarySearch(new int[]{5, 8, 9, 12, 13}, 5);
-//        System.out.println("item is : " + item.isPresent(() -> ))
         System.out.println(item + "item was");
 
     }
